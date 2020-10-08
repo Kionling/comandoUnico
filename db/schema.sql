@@ -1,1 +1,15 @@
+DROP DATABASE IF EXISTS comando_db;
+
 CREATE DATABASE comando_db;
+
+USE comando_db;
+
+
+CREATE TABLE users (
+ id INTEGER AUTO_INCREMENT, 
+ name VARCHAR(200) NOT NULL,
+ email VARCHAR(200) NOT NULL,
+ password VARCHAR(200) NOT NULL,
+ PRIMARY KEY(id)
+);
+
