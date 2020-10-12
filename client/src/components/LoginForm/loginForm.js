@@ -8,9 +8,7 @@ function LoginForm() {
 
             <div className="row container">
                 <div className="col-lg-12">
-                    <form>
-                        <input></input>
-                    </form>
+                    
                 </div>
             </div>
         </div>
