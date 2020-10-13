@@ -1,6 +1,7 @@
 import React from "react";
 import M from "materialize-css";
 import { Link } from "react-router-dom"
+import NavStyles from "./navbar.css"
 function Nav() {
   document.addEventListener("DOMContentLoaded", function () {
     var elems = document.querySelectorAll(".sidenav");
@@ -9,9 +10,9 @@ function Nav() {
   return (
     <div>
       <nav>
-        <div class="nav-wrapper">
-          <a href="#!" class="brand-logo">
-            Logo
+        <div class="nav-wrapper #37474f blue-grey darken-3">
+          <a href="#!" class="brand-logo" id="nav-header">
+            Comando Unico
           </a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger">
             <i class="material-icons">menu</i>

@@ -4,14 +4,13 @@ import FooterStyles from "../Footer/footer.css";
 function Footer() {
   return (
     <div>
-      <footer class="page-footer">
+      <footer class="page-footer #37474f blue-grey darken-3">
         <div class="container">
           <div class="row">
             <div class="col l6 s12">
-              <h5 class="white-text">Footer Content</h5>
+              <h5 class="white-text">Comando Unico</h5>
               <p class="grey-text text-lighten-4">
-                You can use rows and columns here to organize your footer
-                content.
+                Pagina official del grupo Comando Unico 
               </p>
             </div>
             <div class="col l4 offset-l2 s12">
@@ -27,16 +26,7 @@ function Footer() {
                     Daniel's portfolio page 
                   </a>
                 </li>
-                <li>
-                  <a class="grey-text text-lighten-3" href="#!">
-                    Link 3
-                  </a>
-                </li>
-                <li>
-                  <a class="grey-text text-lighten-3" href="#!">
-                    Link 4
-                  </a>
-                </li>
+               
               </ul>
             </div>
           </div>
