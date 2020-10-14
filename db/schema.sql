@@ -13,3 +13,13 @@ CREATE TABLE users (
  PRIMARY KEY(id)
 );
 
+CREATE TABLE performance (
+id INTEGER AUTO_INCREMENT,
+name VARCHAR(200) NOT NULL,
+location VARCHAR(100) NOT NULL,
+date VARCHAR(300) NOT NULL,
+active BOOLEAN default true,
+PRIMARY KEY(id)
+);
+
+CREATE TABLE grupo ()

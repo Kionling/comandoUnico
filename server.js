@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 5000;
 const routes = require("./routes");
 const path = require("path");
 const session = require("express-session");
@@ -24,6 +24,3 @@ db.sequelize.sync().then(function() {
     })
 })
 
-// app.listen(PORT, () => {
-//             console.log(` 🙌😈🌝  app is now listening on ${PORT}`)
-//         })
