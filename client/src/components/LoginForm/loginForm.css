@@ -1,0 +1,28 @@
+#login-signup {
+  border-radius: 20px;
+}
+
+.bold {
+  font-weight: 900;
+}
+
+.bold750 {
+  font-weight: 750;
+}
+
+#loginBanner {
+    background-image: url(./assets/mockBanner.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    margin: 0;
+}
+
+#loginButton {
+    border-radius: 30px;
+}
+
+#loginCard {
+  border-radius: 15px;
+}
