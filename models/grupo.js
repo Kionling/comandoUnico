@@ -13,8 +13,10 @@ module.exports = function (sequelize, DataTypes) {
   });
 
   Grupo.associate = function (models) {
-    Grupo.hasMany(User);
-    Grupo.hasMany(Performance);
+    Grupo.hasMany(models.User)
+    Grupo.hasMany(models.Performance, {
+      onDelete: "cascade"
+    }); 
   };
 
   Grupo.addhook("beforeCreate", function (Grupo) {
