@@ -24,7 +24,6 @@ module.exports = function (sequelize, DataTypes) {
       invite_code += inviteCodeChars[randomCode];
     }
   });
-  
 
   return Grupo;
 };
