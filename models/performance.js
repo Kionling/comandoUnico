@@ -20,7 +20,7 @@ module.exports = function (sequelize, DataTypes) {
   });
 
   Performance.associate = function (models) {
-   Performance.belongsTo(models.grupo, {
+   Performance.belongsTo(models.Grupo, {
      foreignKey: {
        allowNull: false,
      },
