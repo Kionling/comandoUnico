@@ -28,5 +28,9 @@ module.exports = {
       else {
           res.status(401).end();
       }
+  },
+  logout(req, res) {
+      res.logout();
+      res.redirect("/")
   }
 };
