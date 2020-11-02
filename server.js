@@ -7,7 +7,9 @@ const session = require("express-session");
 const sequelize = require("sequelize");
 const SESSION_SECRET = process.env.SESSION_SECRET || "sample secret"
 const db = require("./models")
-// const config = require("./config/passport.js")
+const config = require("./config/passport.js")
+const passport = require("passport")
+const bcrypt = require("bcrypt")
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
