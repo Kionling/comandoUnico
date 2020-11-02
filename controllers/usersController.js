@@ -55,30 +55,32 @@ module.exports = {
       });
   },
   joinGrupo(req, res) {
-      //if user is not logged in
-      if(!req.user) {
-          return res.status(401).end();
-      }
-      db.Grupo.findOne({ where: { invite_code: req.query.invite}})
-      .then( grupo => {
-          if(!grupo){
-              res.status(403).end();
-          } else {
-              db.User.update({
-                  GrupoId: grupo.id,
-              }, { where: { id: req.user.id }
-            })
+    //if user is not logged in
+    if (!req.user) {
+      return res.status(401).end();
+    }
+    db.Grupo.findOne({ where: { invite_code: req.query.invite } })
+      .then((grupo) => {
+        if (!grupo) {
+          res.status(403).end();
+        } else {
+          db.User.update(
+            {
+              GrupoId: grupo.id,
+            },
+            { where: { id: req.user.id } }
+          )
             .then(() => {
-                res.status(200).end();
+              res.status(200).end();
             })
-            .catch(err => {
-                res.status(500).end();
-            })
-          }
+            .catch((err) => {
+              res.status(500).end();
+            });
+        }
       })
-      .catch(err => {
-          console.log(err);
-          res.status(500).end();
-      })
-  }
+      .catch((err) => {
+        console.log(err);
+        res.status(500).end();
+      });
+  },
 };
