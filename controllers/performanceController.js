@@ -34,10 +34,11 @@ module.exports = {
   },
   delete(req, res) {
     db.Performance.destroy({ where: { id: req.query.id } })
-    .then(() => {
+      .then(() => {
         res.status(200).end();
-    }).catch(err => {
+      })
+      .catch((err) => {
         res.status(500).end();
-    })
+      });
   },
 };

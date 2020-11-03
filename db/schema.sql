@@ -5,7 +5,7 @@ CREATE DATABASE comando_db;
 USE comando_db;
 
 
-CREATE TABLE users (
+CREATE TABLE User (
  id INTEGER AUTO_INCREMENT, 
  name VARCHAR(200) NOT NULL,
  email VARCHAR(200) NOT NULL,
@@ -13,13 +13,16 @@ CREATE TABLE users (
  PRIMARY KEY(id)
 );
 
-CREATE TABLE performance (
+CREATE TABLE Performance (
 id INTEGER AUTO_INCREMENT,
-name VARCHAR(200) NOT NULL,
-location VARCHAR(100) NOT NULL,
-date VARCHAR(300) NOT NULL,
-active BOOLEAN default true,
+name VARCHAR(300) NOT NULL,
+data VARCHAR(300) NOT NULL,
 PRIMARY KEY(id)
 );
 
-CREATE TABLE grupo ()
+CREATE TABLE Grupo (
+    id INTEGER AUTO_INCREMENT,
+    name VARACHAR(300) NOT NULL,
+    invite_code VARCHAR(300) NOT NULL,
+    PRIMARY KEY(id)
+);
