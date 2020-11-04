@@ -4,19 +4,12 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    location: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
+   
     date: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    active: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-      defaultValue: true,
-    },
+  
   });
 
   Performance.associate = function (models) {
