@@ -19,7 +19,7 @@ module.exports = function (sequelize, DataTypes) {
     }); 
   };
 
-  Grupo.addhook("beforeCreate", function (Grupo) {
+  Grupo.addHook("beforeCreate", function (Grupo) {
     let invite_code = "";
     for (let i = 0; i < codeLength.length; i++) {
       const randomCode = Math.floor(Math.random() * inviteCodeChars.length);

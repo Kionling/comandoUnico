@@ -9,7 +9,7 @@ const SESSION_SECRET = process.env.SESSION_SECRET || "sample secret"
 const db = require("./models")
 const config = require("./config/passport.js")
 const passport = require("passport")
-const bcrypt = require("bcrypt")
+const bcrypt = require("bcryptjs")
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
