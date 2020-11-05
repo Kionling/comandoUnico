@@ -42,4 +42,7 @@ module.exports = {
         res.status(500).end();
       });
   },
+  getInviteCode(req,res) {
+    db.Grupo.findOne({ where: { id: req.query.id}})
+  }
 };
