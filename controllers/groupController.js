@@ -1,4 +1,5 @@
 const db = require("../models");
+const grupo = require("../models/grupo");
 
 module.exports = {
   getUserInfo(req, res) {
@@ -42,4 +43,26 @@ module.exports = {
         res.status(500).end();
       });
   },
+  getInviteCode(req,res) {
+    db.Grupo.findOne({ where: { id: req.query.id}})
+    .then( data => res.json(data.invite_code))
+    .catch(err => {
+      res.status(500).end();
+    })
+  },
+  joinGrupo(req, res){
+    if(!req.user){
+      return res.status(401).end();
+    }
+    db.Grupo.findOne({ where: { invite_code: req.query.invite_code}})
+    .then(grupo => {
+      if(!grupo){
+        res.status(403).end();
+      } else {
+        db.User.update({
+          GrupoId: GrupoId.id,
+        })
+      }
+    }) 
+  }
 };
