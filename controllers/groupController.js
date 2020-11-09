@@ -65,18 +65,5 @@ module.exports = {
       }
     }) 
   },
-  leaveGrupo(req, res) {
-    if(!req.User) {
-      res.status(401).end();
-    }
-    db.Grupo.destroy({ where: {id: req.query.GrupoId}}).then( grupo => {
-      if(!grupo){
-        res.status(403).end();
-      } else {
-        db.User.update({
-          GrupoId: GrupoId.id,
-        })
-      }
-    })
-  }
+  
 };
