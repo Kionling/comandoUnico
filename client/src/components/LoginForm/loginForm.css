@@ -11,11 +11,13 @@
 }
 
 #loginBanner {
-    background-image: url(./assets/mockBanner.gif);
+    background-image: url(../../pages/Login/loginAssets/Ghxe.gif);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 300px;
+    height: undefined;
+    width: undefined;
+  
     margin: 0;
 }
 
@@ -26,3 +28,4 @@
 #loginCard {
   border-radius: 15px;
 }
+

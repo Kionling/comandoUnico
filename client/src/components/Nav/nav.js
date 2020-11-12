@@ -2,6 +2,7 @@ import React from "react";
 import M from "materialize-css";
 import { Link } from "react-router-dom";
 import NavStyles from "./navbar.css";
+import Comando from "./NavAssets/Comando.png"
 function Nav() {
   document.addEventListener("DOMContentLoaded", function () {
     var elems = document.querySelectorAll(".sidenav");
@@ -12,7 +13,7 @@ function Nav() {
       <nav>
         <div class="nav-wrapper #37474f blue-grey darken-3">
           <Link to="/" class="brand-logo" id="nav-header">
-            Comando Unico
+            {/* <img className="ComandoUnico" src={Comando}/> */}
           </Link>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger">
             <i class="material-icons">menu</i>
