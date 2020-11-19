@@ -23,8 +23,8 @@ export default {
     removePerformance: function(performanceId){
         return Axios.delete("/api/performance?id=" + performanceId)
     },
-    getGrupoinfo: function(){
-        return Axios.get("/api/grupo")
+    getGrupoInfo: function(){
+        return Axios.get("/api/Grupo")
     },
     getGrupoPerformances: function(){
         return Axios.get("/api/performances")
