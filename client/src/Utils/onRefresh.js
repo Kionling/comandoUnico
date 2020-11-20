@@ -21,15 +21,45 @@ function refreshUserInformation() {
       dispatchEvent({ type: GET_USERS, users: "", userId: null });
     });
 
-  API.getGrupoInfo().then((response) => {
-    dispatch({
-      type: GET_PERFORMANCES,
-      grupo: response.data.name,
-      inviteCode: response.data.invite_code,
-    })
-    dispatch({
+  API.getGrupoInfo()
+    .then((response) => {
+      dispatch({
+        type: GET_PERFORMANCES,
+        grupo: response.data.name,
+        inviteCode: response.data.invite_code,
+      });
+      dispatch({
         type: GET_ARTISTAS,
-        artistas: response.data.artistas
+        artistas: response.data.artistas,
+      });
     })
+    .catch((err) => {
+      console.log(err);
+      dispatch({
+        type: GET_GRUPO,
+        grupo: null,
+        inviteCode: null,
+      });
+    });
+  dispatch({
+    type: GET_ARTISTAS,
+    artistas: [],
+  }).catch((err) => {
+    console.log(err);
   });
+
+  API.getGrupoPerformances()
+    .then((res) => {
+      dispatch({
+        type: GET_PERFORMANCES,
+        performances: res.data,
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+      dispatch({
+        type: GET_PERFORMANCES,
+        performances: [],
+      });
+    });
 }

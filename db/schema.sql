@@ -26,5 +26,6 @@ CREATE TABLE Grupo (
     id INTEGER AUTO_INCREMENT,
     name VARCHAR(300) NOT NULL,
     invite_code VARCHAR(300) NOT NULL,
+    artistas VARCHAR(400), 
     PRIMARY KEY(id)
 );
