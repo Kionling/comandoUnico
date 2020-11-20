@@ -63,3 +63,5 @@ function refreshUserInformation() {
       });
     });
 }
+
+export refreshUserInformation
