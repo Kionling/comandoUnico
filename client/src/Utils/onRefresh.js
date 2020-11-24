@@ -7,10 +7,10 @@ import {
 } from "./actions";
 import { createPool } from "mysql";
 
-function refreshUserInformation() {
+function refreshUserInformation(dispatch) {
   API.getUserInformation()
     .then((response) => {
-      dispatchEvent({
+      dispatch({
         type: GET_USERS,
         users: response.data.name,
         userId: response.data.id,
@@ -18,7 +18,7 @@ function refreshUserInformation() {
     })
     .catch((err) => {
       console.log(err);
-      dispatchEvent({ type: GET_USERS, users: "", userId: null });
+      dispatch({ type: GET_USERS, users: "", userId: null });
     });
 
   API.getGrupoInfo()
@@ -64,4 +64,4 @@ function refreshUserInformation() {
     });
 }
 
-export refreshUserInformation
+export default refreshUserInformation();

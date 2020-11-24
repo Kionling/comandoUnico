@@ -9,6 +9,7 @@ import Home from "../src/pages/Home/home";
 import SignUp from "../src/pages/SignUp/signUp";
 import Nav from "../src/components/Nav/nav";
 import Footer from "../src/components/Footer/footer";
+import GlobalState from "../src/Utils/GlobalState"
 function App() {
   return (
     <Router>

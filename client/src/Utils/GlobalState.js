@@ -1,11 +1,11 @@
-import { createContext, useReducer, useContext } from "react";
-import { act } from "react-dom/test-utils";
+import React, { createContext, useReducer, useContext } from "react";
+
 import {
   GET_USERS,
   GET_GRUPO,
   GET_ARTISTAS,
   GET_PERFORMANCES,
-  UPDATE_PEFORMANCE,
+  UPDATE_PERFORMANCE,
   ADD_PERFORMANCE,
   DELETE_PERFORMANCE,
 } from "./actions";
@@ -45,7 +45,9 @@ const reducer = (state, action) => {
       return {
         ...state,
         performances: state.performances.map((performance) => {
-          return performanceId !== action.id ? performance : action.performance;
+          return performance.id !== action.id
+            ? performance
+            : action.performance;
         }),
       };
     }
@@ -66,7 +68,7 @@ const reducer = (state, action) => {
   }
 };
 
-const performanceProvider = ({ value: [], ...props }) => {
+const PerformanceProvider = ({ value: [], ...props }) => {
   const [state, dispatch] = useReducer(reducer, {
     artistas: [],
     performances: [],
@@ -74,8 +76,8 @@ const performanceProvider = ({ value: [], ...props }) => {
   return <Provider value={[state, dispatch]} {...props} />;
 };
 
-const usePerformanceProvider = () => {
+const usePerformanceContext = () => {
   return useContext(PerformanceContext);
 };
 
-export { performanceProvider, usePerformanceContext };
+export { PerformanceProvider, usePerformanceContext };
