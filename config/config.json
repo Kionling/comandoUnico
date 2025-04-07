@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "your_local_username",
+    "password": "your_local_password",
+    "database": "your_local_database",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "your_local_username",
+    "password": "your_local_password",
+    "database": "your_local_database",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "your_jawsdb_username",
+    "password": "your_jawsdb_password",
+    "database": "your_jawsdb_database",
+    "host": "your_jawsdb_host",
+    "dialect": "mysql"
+  }
+}

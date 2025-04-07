@@ -1,0 +1,37 @@
+{
+  "name": "comandounico",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kionling/comandoUnico.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kionling/comandoUnico/issues"
+  },
+  "homepage": "https://github.com/Kionling/comandoUnico#readme",
+  "dependencies": {
+    "concurrently": "^9.1.2",
+    "express": "^5.1.0",
+    "heroku": "^8.7.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^3.1.9",
+    "sequelize": "^6.37.7"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.2"
+  }
+}
